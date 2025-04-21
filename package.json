@@ -1,7 +1,7 @@
 {
-  "name": "mock-design-system-repo",
+  "name": "@many-repo-manager-poc/mock-design-system-repo",
   "private": false,
-  "version": "8.0.5",
+  "version": "8.1.5",
   "scripts": {
     "dev": "pnpm --filter ./apps/docs dev",
     "dev.ct": "pnpm --filter ./apps/component-tests dev -- --port 6174",
@@ -33,5 +33,20 @@
     "@qwik-ui/headless": "0.6.4",
     "pagefind": "1.2.0"
   },
-  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
+  "description": "a mock repo to test updating packages ",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Many-Repo-Manager-PoC/mock-design-system-repo.git"
+  },
+  "keywords": [
+    "design-system"
+  ],
+  "author": "Natalie Abrams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Many-Repo-Manager-PoC/mock-design-system-repo/issues"
+  },
+  "homepage": "https://github.com/Many-Repo-Manager-PoC/mock-design-system-repo#readme"
 }
