@@ -1,5 +1,5 @@
 import { component$, Slot } from '@builder.io/qwik';
-import './styles.css';
+import { Button } from '../Button/Button';
 
 interface FeatureCardProps {
   title: string;
@@ -25,7 +25,9 @@ export const FeatureCard = component$<FeatureCardProps>(({
       <p class="feature-card-description">{description}</p>
       {hasAction && (
         <div class="feature-card-action">
-          <Slot name="action" />
+          <Button variant="secondary">
+            <Slot name="action" />
+          </Button>
         </div>
       )}
     </div>

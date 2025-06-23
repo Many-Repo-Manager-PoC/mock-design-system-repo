@@ -1,5 +1,5 @@
 import { component$, Slot } from '@builder.io/qwik';
-import './styles.css';
+import { Button } from '../Button/Button';
 
 interface ModalProps {
   isOpen: boolean;
@@ -10,9 +10,9 @@ export const Modal = component$<ModalProps>(({ isOpen, onClose$ }) => {
   if (!isOpen) return null;
 
   return (
-    <div class="modal-overlay" onClick$={onClose$}>
-      <div class="modal-content" onClick$={(e) => e.stopPropagation()}>
-        <button class="modal-close" onClick$={onClose$}>×</button>
+    <div onClick$={onClose$}>
+      <div onClick$={(e) => e.stopPropagation()}>
+        <Button onClick$={onClose$}>×</Button>
         <Slot />
       </div>
     </div>

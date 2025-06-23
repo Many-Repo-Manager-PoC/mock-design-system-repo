@@ -1,20 +1,28 @@
 import { component$, Slot } from '@builder.io/qwik';
-import './styles.css';
+import { Button } from '../Button/Button';
 
 interface BasicCardProps {
   title?: string;
   hasFooter?: boolean;
+  hasAction?: boolean;
 }
 
-export const BasicCard = component$<BasicCardProps>(({ title, hasFooter = false }) => {
+export const BasicCard = component$<BasicCardProps>(({ title, hasFooter = false, hasAction = false }) => {
   return (
-    <div class="basic-card">
-      {title && <h3 class="basic-card-title">{title}</h3>}
-      <div class="basic-card-content">
+    <div>
+      {title && <h3>{title}</h3>}
+      <div>
         <Slot />
       </div>
+      {hasAction && (
+        <div>
+          <Button variant="primary">
+            <Slot name="action" />
+          </Button>
+        </div>
+      )}
       {hasFooter && (
-        <div class="basic-card-footer">
+        <div>
           <Slot name="footer" />
         </div>
       )}

@@ -1,5 +1,4 @@
 import { component$, Slot } from '@builder.io/qwik';
-import './styles.css';
 
 interface ButtonProps {
   onClick$?: () => void;
@@ -12,7 +11,6 @@ export const Button = component$<ButtonProps>(({ onClick$, type = 'button', vari
     <button
       type={type}
       onClick$={onClick$}
-      class={`button button-${variant}`}
     >
       <Slot />
     </button>

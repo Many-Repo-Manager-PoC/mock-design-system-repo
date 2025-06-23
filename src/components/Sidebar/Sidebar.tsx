@@ -1,14 +1,16 @@
 import { component$, Slot } from '@builder.io/qwik';
-import './styles.css';
+import { Button } from '../Button/Button';
 
 interface SidebarProps {
   isOpen: boolean;
+  onToggle$?: () => void;
 }
 
-export const Sidebar = component$<SidebarProps>(({ isOpen }) => {
+export const Sidebar = component$<SidebarProps>(({ isOpen, onToggle$ }) => {
   return (
-    <aside class={`sidebar ${isOpen ? 'sidebar-open' : ''}`}>
-      <nav class="sidebar-nav">
+    <aside>
+      <Button onClick$={onToggle$}>Toggle Sidebar</Button>
+      <nav>
         <Slot />
       </nav>
     </aside>
