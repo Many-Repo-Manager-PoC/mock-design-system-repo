@@ -4,7 +4,6 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import { Modal } from '../Modal/Modal';
 import { BasicCard } from '../Cards/BasicCard';
 import { FeatureCard } from '../Cards/FeatureCard';
-import { Button } from '../Button/Button';
 
 export const Dashboard = component$(() => {
   const isSidebarOpen = useSignal(false);
@@ -26,14 +25,11 @@ export const Dashboard = component$(() => {
       </Sidebar>
 
       <main>
-        <Button onClick$={() => isModalOpen.value = true}>
-          Open Modal
-        </Button>
+
 
         <Modal isOpen={isModalOpen.value} onClose$={() => isModalOpen.value = false}>
           <h2>Welcome to the Dashboard!</h2>
           <p>This is a modal opened from the dashboard.</p>
-          <Button onClick$={() => isModalOpen.value = false}>Close</Button>
         </Modal>
 
         <div>
